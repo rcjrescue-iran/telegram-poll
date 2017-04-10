@@ -13,7 +13,7 @@ const (
 	token = "328416454:AAHs2sRT4gBjT44U23wa5nQRsRdbrQ4tzlQ" // will be revoke
 
 	//messageID from telegram channel - if equal to zero - telebot will post new result and fetch new messageID
-	messageID = 0
+	messageID = 374
 
 	//defaultMessage is a text message that will send to users if new text message received
 	defaultMessage = `این سرویس پس از مسابقات غیر فعال شده است`
