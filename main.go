@@ -40,10 +40,10 @@ func init() {
 func main() {
 	initTemplate()
 
-	// initTelegram()
-	// go listenToMessages()
+	initTelegram()
+	go listenToMessages()
 
-	// go autoUpdate()
+	go autoUpdate()
 
 	router := mux.NewRouter().StrictSlash(true)
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("template/static"))))

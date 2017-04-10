@@ -26,7 +26,7 @@ var (
 
 	oldMsg string
 
-	telegramChat = telebot.Chat{Type: "channel", Username: "rcjrescuetest"}
+	telegramChat = telebot.Chat{Type: "channel", Username: "rcjrescue"}
 
 	sendOption = telebot.SendOptions{
 		ReplyMarkup: telebot.ReplyMarkup{
@@ -251,11 +251,22 @@ func autoUpdate() {
 
 	text += "\n."
 
+	var err error
 	msg := telebot.Message{}
+
+	if messageID == 0 {
+		msg, err = bot.SendMessage(telegramChat, text, &sendOption)
+		if err != nil {
+			log.Println(err)
+		}
+	} else {
+		msg.ID = messageID
+	}
+
 	msg.ID = 4
 
 	if oldMsg != text {
-		var err error
+
 		_, err = bot.EditMessageText(telegramChat, msg, text, &sendOption)
 		if err != nil {
 			log.Println(err)
