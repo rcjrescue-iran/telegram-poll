@@ -31,7 +31,7 @@ var (
 			InlineKeyboard: [][]telebot.KeyboardButton{
 				[]telebot.KeyboardButton{
 					telebot.KeyboardButton{
-						URL:  "http://google.com",
+						URL:  "https://rcjrescue.zibaei.net/",
 						Text: "شرکت در نظر سنجی",
 					},
 				},
