@@ -1,0 +1,18 @@
+{
+    "go.buildOnSave": false,
+    "go.lintOnSave": false,
+    "go.vetOnSave": false,
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintTool": "golint",
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.formatOnSave": true, 
+    "go.formatTool": "gofmt",
+    "go.formatFlags": ["-s","-e"],
+    "go.goroot": "/home/aiden/projects/go",
+    "go.gopath": "/home/aiden/projects/gosrc",
+    "go.gocodeAutoBuild": false
+}

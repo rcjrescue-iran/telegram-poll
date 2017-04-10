@@ -1,0 +1,57 @@
+body {
+    background-color: #aaa;
+    direction: rtl;
+}
+
+.sm-top {
+    margin-top: 1em;
+}
+
+@media only screen and (min-width:768px) {
+    .sm-top {
+        margin-top: 3em;
+    }
+}
+
+.header-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+[type="radio"]:not(:checked), [type="radio"]:checked {
+    left:0px;
+}
+
+[type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+[type="radio"]+label:before, [type="radio"]+label:after {
+    left:auto;
+    right:0px;
+}
+
+[type="radio"]:not(:checked)+label, [type="radio"]:checked+label {
+    padding-right: 35px;
+    padding-left: 0;
+}
+
+.row .col {
+    float: none;
+}
+
+.intro-text {
+    text-align: justify;
+    font-size: 11px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
