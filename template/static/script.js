@@ -10,6 +10,7 @@ function sendToServer() {
     result.partition = getRadioItems(8);
     result.broadcast = getRadioItems(9);    
     result.points = getRadioItems(10);
+    result.text = $("#text").val();
     $.ajax({
         url: "/api/submit",
         type: "POST",

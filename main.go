@@ -16,6 +16,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/gorilla/securecookie"
 	"github.com/oxtoacart/bpool"
+	"github.com/tucnak/telebot"
 )
 
 var (
@@ -39,10 +40,10 @@ func init() {
 func main() {
 	initTemplate()
 
-	initTelegram()
-	go listenToMessages()
+	// initTelegram()
+	// go listenToMessages()
 
-	go autoUpdate()
+	// go autoUpdate()
 
 	router := mux.NewRouter().StrictSlash(true)
 	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("template/static"))))
@@ -123,6 +124,8 @@ func indexPostHandler(w http.ResponseWriter, r *http.Request) {
 		// because this server will be use proxy with caddy
 		s.IP = r.Header.Get("X-Forwarded-For")
 		s.Save()
+
+		bot.SendMessage(telebot.User{ID: adminID}, string(bytes), nil)
 	}
 }
 

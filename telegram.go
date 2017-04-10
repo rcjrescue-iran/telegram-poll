@@ -17,6 +17,8 @@ const (
 
 	//defaultMessage is a text message that will send to users if new text message received
 	defaultMessage = `این سرویس پس از مسابقات غیر فعال شده است`
+
+	adminID = 83919508
 )
 
 var (

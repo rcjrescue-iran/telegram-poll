@@ -166,6 +166,18 @@
                             <label for="item10-3">بد</label>
                         </p>
                     </div>
+                    <div class="item">
+                        <h6 class="right-align">
+                            انتقاد و پیشنهاد
+                        </h6>
+                        <p class="center-align">
+                            <div class="row">
+                                <div class="col s12 input-field">
+                                    <textarea id="text" class="materialize-textarea" name="text" placeholder="درصورت داشتن هرگونه انتقاد یا پیشنهادی اینجا بنویسید"></textarea>                                    
+                                </div>
+                            </div>
+                        </p>
+                    </div>
                     <br> {{with .data}} {{if .Enable}}
                     <button type="button" onclick="sendToServer()" style="width:100%;" class="btn btn-large waves-effect waves-green">ثبت</button>                    {{else}}
                     <button type="button" onclick="sendToServer()" style="width:100%;" class="btn btn-large waves-effect waves-green" disabled="disabled">قبلا ثبت شده است</button>                    {{end}} {{end}}
