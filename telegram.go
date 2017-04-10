@@ -263,8 +263,6 @@ func autoUpdate() {
 		msg.ID = messageID
 	}
 
-	msg.ID = 4
-
 	if oldMsg != text {
 
 		_, err = bot.EditMessageText(telegramChat, msg, text, &sendOption)
